@@ -1,0 +1,74 @@
+h1 {
+  color: rgb(248, 141, 141);
+}
+
+p {
+  color: rgb(248, 141, 141);
+}
+
+.container {
+  border-radius: 12px;
+  background-color: rgb(248, 141, 141);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 40px;
+  background-color: rgb(189, 255, 189);
+}
+.card h2 {
+  color: grey;
+}
+.card p {
+  color: rgb(121, 121, 255);
+}
+.card button {
+  background-color: rgb(248, 141, 141);
+  display: inline;
+  border-radius: 12px;
+}
+
+.card-btn {
+  padding: 12px;
+  border-color: black;
+  border-width: 2px;
+  border-style: dashed;
+}
+
+.my-text {
+  font-weight: bold;
+}
+
+.domino-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgb(248, 141, 141);
+  border-radius: 12px;
+  margin: 12px;
+}
+
+.domino-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(189, 255, 189);
+  border-radius: 12px;
+  margin: 12px;
+}
+
+.growing-text-1 {
+  font-size: 20px;
+}
+
+.growing-text-2 {
+  font-size: 40px;
+}
+
+.growing-text-3 {
+  font-size: 60px;
+}/*# sourceMappingURL=styles.css.map */

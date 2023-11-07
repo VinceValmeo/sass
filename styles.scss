@@ -1,0 +1,103 @@
+@import './variables';
+
+h1{
+ color: $primary-color;
+}
+
+p{
+    color: $primary-color;
+}
+
+
+.container{
+border-radius: $radius;
+background-color: $primary-color;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border-radius: $radius;
+    padding: 40px;
+    background-color: $card-bg;
+    h2{
+color: $card-title;
+    }
+    p{
+        color: $card-description;
+    }
+    button{
+        background-color: $primary-color;
+        display: inline;
+        border-radius: $radius;
+    }
+}
+
+@mixin border-style($bc, $bw, $bs){
+    border-color: $bc;
+    border-width: $bw;
+    border-style: $bs
+}
+
+
+.card-btn{
+    padding: 12px;
+    @include border-style(black, 2px, dashed);
+}
+
+
+@mixin font-weight($val){
+    @if $val == light{
+font-weight: 200;
+    } 
+    @else if $val == medium{
+font-weight: 600;
+    }
+     @else if $val == heavy{
+font-weight: bold;
+    }
+    @else{
+font-weight: 100;
+    }
+  }
+
+  .my-text{
+    @include font-weight(heavy);
+  }
+
+
+  
+
+
+  @mixin flexCenter($direction){
+    // repeated code
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    // things that can change
+        flex-direction: $direction;
+    }
+    
+
+    .domino-1{
+    @include flexCenter(row);
+
+    background-color: $primary-color;
+    border-radius: $radius;
+    margin: 12px;
+
+    }
+  
+    .domino-2{
+        @include flexCenter(column);
+        background-color: $card-bg;
+        border-radius: $radius;
+        margin: 12px;
+    }
+
+    @for $i from 1 to 4{
+        .growing-text-#{$i}{
+            font-size: 20px * $i;
+        }
+      }
